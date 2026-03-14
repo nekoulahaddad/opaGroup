@@ -196,6 +196,34 @@ img {
   animation: fadeUp 0.8s ease both;
 }
 
+.hero-side {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-visual {
+  margin: 0;
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.hero-visual img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+.hero-visual figcaption {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -310,7 +338,11 @@ h1 {
 }
 
 .section.accent {
-  background: #fff;
+  background: #fff1f2;
+}
+
+.section.media {
+  background: #ffffff;
 }
 
 .section-header {
@@ -361,6 +393,40 @@ h1 {
   gap: 18px;
 }
 
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.media-card {
+  margin: 0;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(8, 18, 40, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.media-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.media-card figcaption {
+  padding: 16px 18px 20px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 26px 60px rgba(8, 18, 40, 0.14);
+}
+
 .list {
   padding-left: 18px;
   margin: 0;
@@ -378,6 +444,28 @@ h1 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+.presence-visual {
+  margin: 22px 0 0;
+  background: #ffffff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(8, 18, 40, 0.08);
+}
+
+.presence-visual img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.presence-visual figcaption {
+  padding: 14px 18px 18px;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .team-grid {
@@ -479,7 +567,8 @@ html[dir="rtl"] .lang-switch {
   .cards,
   .presence-grid,
   .contact-grid,
-  .office-grid {
+  .office-grid,
+  .media-grid {
     grid-template-columns: 1fr;
   }
 
