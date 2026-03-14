@@ -85,12 +85,27 @@
         <a href="#team" data-i18n="nav_team">Team</a>
         <a href="#contact" data-i18n="nav_contact">Contact</a>
       </nav>
-      <div class="lang-switch" role="group" aria-label="Language switch">
-        <button type="button" data-lang="en" class="active">EN</button>
-        <button type="button" data-lang="fr">FR</button>
-        <button type="button" data-lang="ar">AR</button>
-        <button type="button" data-lang="zh">ZH</button>
-        <button type="button" data-lang="sw">SW</button>
+      <div class="lang-switch" aria-label="Language switch">
+        <div class="lang-dropdown" id="lang-dropdown">
+          <button class="lang-trigger" type="button" aria-haspopup="listbox" aria-expanded="false">
+            <span class="lang-name">English</span>
+            <span class="lang-caret">▾</span>
+          </button>
+          <ul class="lang-menu" role="listbox" aria-label="Languages">
+            <li role="option" data-lang="en"><span class="lang-name">English</span></li>
+            <li role="option" data-lang="fr"><span class="lang-name">Français</span></li>
+            <li role="option" data-lang="ar"><span class="lang-name">العربية</span></li>
+            <li role="option" data-lang="zh"><span class="lang-name">中文</span></li>
+            <li role="option" data-lang="sw"><span class="lang-name">Kiswahili</span></li>
+          </ul>
+        </div>
+        <select id="lang-select" class="lang-select native-select" aria-label="Select language">
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="ar">AR</option>
+          <option value="zh">ZH</option>
+          <option value="sw">SW</option>
+        </select>
       </div>
     </div>
   </header>

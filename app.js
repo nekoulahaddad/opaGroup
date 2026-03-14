@@ -1028,15 +1028,54 @@ const renderOffices = () => {
 };
 
 const initLangSwitch = () => {
-  const buttons = document.querySelectorAll('.lang-switch button');
-  buttons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      buttons.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      const lang = btn.getAttribute('data-lang');
+  const select = document.getElementById('lang-select');
+  const dropdown = document.getElementById('lang-dropdown');
+  if (!select || !dropdown) return;
+
+  const trigger = dropdown.querySelector('.lang-trigger');
+  const menu = dropdown.querySelector('.lang-menu');
+  const items = dropdown.querySelectorAll('[data-lang]');
+
+  const setActive = (lang) => {
+    items.forEach((item) => item.classList.toggle('active', item.getAttribute('data-lang') === lang));
+    const active = dropdown.querySelector(`[data-lang=\"${lang}\"]`);
+    if (active) {
+      const name = active.querySelector('.lang-name')?.textContent || '';
+      const triggerName = trigger.querySelector('.lang-name');
+      if (triggerName) triggerName.textContent = name;
+    }
+  };
+
+  const closeMenu = () => {
+    dropdown.classList.remove('open');
+    trigger.setAttribute('aria-expanded', 'false');
+  };
+
+  trigger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = dropdown.classList.toggle('open');
+    trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  items.forEach((item) => {
+    item.addEventListener('click', () => {
+      const lang = item.getAttribute('data-lang');
+      select.value = lang;
       updateText(lang);
+      setActive(lang);
+      closeMenu();
     });
   });
+
+  document.addEventListener('click', () => closeMenu());
+  menu.addEventListener('click', (e) => e.stopPropagation());
+
+  select.addEventListener('change', () => {
+    updateText(select.value);
+    setActive(select.value);
+  });
+
+  setActive(select.value);
 };
 
 const initReveal = () => {
@@ -1065,5 +1104,7 @@ const initReveal = () => {
 
 renderOffices();
 updateText('en');
+const langSelect = document.getElementById('lang-select');
+if (langSelect) langSelect.value = 'en';
 initLangSwitch();
 initReveal();
