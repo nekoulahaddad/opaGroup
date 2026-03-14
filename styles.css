@@ -1,4 +1,4 @@
-:root {\r\n  --bg: #f5f7fb;\r\n  --ink: #0b1b3f;\r\n  --muted: #4a5877;\r\n  --accent: #0b2f86;\r\n  --accent-dark: #07245f;\r\n  --accent-2: #e2232a;\r\n  --card: #ffffff;\r\n  --border: #dbe3f2;\r\n  --shadow: 0 20px 60px rgba(8, 18, 40, 0.12);\r\n}
+:root {\r\n  --bg: #ffffff;\r\n  --ink: #0b1b3f;\r\n  --muted: #4a5877;\r\n  --accent: #0b2f86;\r\n  --accent-dark: #07245f;\r\n  --accent-2: #f06a6f;\r\n  --card: #ffffff;\r\n  --border: #dbe3f2;\r\n  --shadow: 0 20px 60px rgba(8, 18, 40, 0.12);\r\n}
 
 * {
   box-sizing: border-box;
@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   color: var(--ink);
-  background: var(--bg);
+  background: linear-gradient(180deg, #ffffff 0%, #f6f9ff 45%, #ffffff 100%);
   line-height: 1.6;
 }
 
@@ -17,8 +17,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 10%, rgba(11, 47, 134, 0.12), transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(226, 35, 42, 0.1), transparent 60%);
+    radial-gradient(circle at 20% 10%, rgba(11, 47, 134, 0.08), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(11, 47, 134, 0.05), transparent 60%);
   pointer-events: none;
   z-index: -1;
 }
@@ -113,6 +113,7 @@ img {
 }
 
 .site-nav a {
+  white-space: nowrap;
   padding: 6px 4px;
   border-bottom: 2px solid transparent;
   position: relative;
@@ -366,17 +367,19 @@ h1 {
 
 .btn.primary {
   background: var(--accent);
-  color: #fff;
+  color: rgba(226, 35, 42, 0.8);
+  box-shadow: 0 14px 30px rgba(11, 47, 134, 0.25);
 }
 
 .btn.primary:hover {
   background: var(--accent-dark);
+  box-shadow: 0 16px 34px rgba(11, 47, 134, 0.3);
 }
 
 .btn.ghost {
-  background: transparent;
+  background: rgba(11, 47, 134, 0.08);
   color: var(--accent);
-  border-color: var(--accent-2);
+  border-color: rgba(11, 47, 134, 0.18);
 }
 
 .hero-highlights {
@@ -433,11 +436,13 @@ h1 {
 }
 
 .section.soft {
-  background: #f0f4ff;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
 }
 
 .section.accent {
-  background: #f7f9ff;
+  background: #ffffff;
+  border-top: 1px solid var(--border);
 }
 
 .section.media {
@@ -665,6 +670,12 @@ html[dir="rtl"] .lang-switch {
   }
 }
 
+@media (max-width: 1300px) {
+  .site-nav {
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-grid,
   .split,
@@ -680,10 +691,6 @@ html[dir="rtl"] .lang-switch {
 
   .team-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .site-nav {
-    display: none;
   }
 }
 
@@ -786,3 +793,5 @@ html {
     transform: translateY(-4px);
   }
 }
+
+
