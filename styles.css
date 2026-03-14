@@ -1,14 +1,4 @@
-﻿:root {
-  --bg: #f5f1e8;
-  --ink: #1b1a17;
-  --muted: #5a564e;
-  --accent: #0f7c66;
-  --accent-dark: #0a5d4c;
-  --accent-2: #d4833d;
-  --card: #fffaf2;
-  --border: #e7ded1;
-  --shadow: 0 20px 60px rgba(27, 26, 23, 0.12);
-}
+:root {\r\n  --bg: #f5f7fb;\r\n  --ink: #0b1b3f;\r\n  --muted: #4a5877;\r\n  --accent: #0b2f86;\r\n  --accent-dark: #07245f;\r\n  --accent-2: #e2232a;\r\n  --card: #ffffff;\r\n  --border: #dbe3f2;\r\n  --shadow: 0 20px 60px rgba(8, 18, 40, 0.12);\r\n}
 
 * {
   box-sizing: border-box;
@@ -56,7 +46,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 9;
-  background: rgba(245, 241, 232, 0.92);
+  background: rgba(245, 247, 251, 0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
@@ -76,15 +66,15 @@ img {
 }
 
 .brand-mark {
-  width: 50px;
-  height: 50px;
-  border-radius: 12px;
-  background: var(--accent);
-  color: #fff;
+  width: 120px;
+  height: 72px;
   display: grid;
   place-items: center;
-  font-weight: 700;
-  letter-spacing: 0.08em;
+}
+
+.brand-mark svg {
+  width: 120px;
+  height: 72px;
 }
 
 .brand-text {
@@ -115,7 +105,7 @@ img {
 }
 
 .site-nav a:hover {
-  border-color: var(--accent);
+  border-color: var(--accent-2);
 }
 
 .lang-switch {
@@ -152,7 +142,7 @@ img {
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(13, 124, 102, 0.15), transparent 70%);
+  background: radial-gradient(circle, rgba(11, 47, 134, 0.18), transparent 70%);
   z-index: 0;
 }
 
@@ -164,7 +154,7 @@ img {
 .hero::after {
   bottom: -160px;
   left: -120px;
-  background: radial-gradient(circle, rgba(209, 131, 61, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(226, 35, 42, 0.2), transparent 70%);
 }
 
 .hero-grid {
@@ -180,7 +170,7 @@ img {
   text-transform: uppercase;
   letter-spacing: 0.18em;
   font-size: 0.75rem;
-  color: var(--accent-dark);
+  color: var(--accent);
   font-weight: 600;
 }
 
@@ -229,6 +219,7 @@ h1 {
 .btn.ghost {
   background: transparent;
   color: var(--accent);
+  border-color: var(--accent-2);
 }
 
 .hero-highlights {
@@ -278,11 +269,11 @@ h1 {
 }
 
 .section.soft {
-  background: #faf6ef;
+  background: #f0f4ff;
 }
 
 .section.accent {
-  background: #f0e8da;
+  background: #fff;
 }
 
 .section-header {
@@ -317,7 +308,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 16px;
   padding: 22px;
-  box-shadow: 0 18px 40px rgba(27, 26, 23, 0.08);
+  box-shadow: 0 18px 40px rgba(8, 18, 40, 0.08);
 }
 
 .cards {
@@ -352,7 +343,7 @@ h1 {
 }
 
 .team-card {
-  background: #fffaf2;
+  background: #ffffff;
   border: 1px solid var(--border);
   border-radius: 14px;
   padding: 18px;
@@ -395,8 +386,8 @@ h1 {
 }
 
 .site-footer {
-  background: #161511;
-  color: #f3efe6;
+  background: #081733;
+  color: #f5f7fb;
   padding: 32px 0;
 }
 
@@ -407,7 +398,7 @@ h1 {
 }
 
 .muted {
-  color: #cfc5b7;
+  color: #a9b7d1;
   font-size: 0.9rem;
 }
 
@@ -469,3 +460,4 @@ html[dir="rtl"] .lang-switch {
 html {
   scroll-behavior: smooth;
 }
+
