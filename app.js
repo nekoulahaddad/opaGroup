@@ -839,8 +839,84 @@ const offices = [
   }
 ];
 
+const officesI18n = {
+  en: [
+    "South Africa (Headquarters)",
+    "Rwanda",
+    "Kenya",
+    "Congo DRC",
+    "Botswana",
+    "Mozambique",
+    "Burundi",
+    "Uganda",
+    "Zambia",
+    "Malawi",
+    "Dubai, UAE",
+    "China (Hong Kong)"
+  ],
+  fr: [
+    "Afrique du Sud (Siege)",
+    "Rwanda",
+    "Kenya",
+    "Congo RDC",
+    "Botswana",
+    "Mozambique",
+    "Burundi",
+    "Ouganda",
+    "Zambie",
+    "Malawi",
+    "Dubai, EAU",
+    "Chine (Hong Kong)"
+  ],
+  ar: [
+    "جنوب إفريقيا (المقر)",
+    "رواندا",
+    "كينيا",
+    "الكونغو الديمقراطية",
+    "بوتسوانا",
+    "موزمبيق",
+    "بوروندي",
+    "أوغندا",
+    "زامبيا",
+    "مالاوي",
+    "دبي، الإمارات",
+    "الصين (هونغ كونغ)"
+  ],
+  zh: [
+    "南非（总部）",
+    "卢旺达",
+    "肯尼亚",
+    "刚果（金）",
+    "博茨瓦纳",
+    "莫桑比克",
+    "布隆迪",
+    "乌干达",
+    "赞比亚",
+    "马拉维",
+    "迪拜（阿联酋）",
+    "中国（香港）"
+  ],
+  sw: [
+    "Afrika Kusini (Makao Makuu)",
+    "Rwanda",
+    "Kenya",
+    "Kongo DRC",
+    "Botswana",
+    "Msumbiji",
+    "Burundi",
+    "Uganda",
+    "Zambia",
+    "Malawi",
+    "Dubai, UAE",
+    "China (Hong Kong)"
+  ]
+};
+
+let currentLang = "en";
+
 const updateText = (lang) => {
   const t = translations[lang] || translations.en;
+  currentLang = lang;
   document.documentElement.lang = lang;
   document.documentElement.dir = t.dir;
   document.title = t.page_title;
@@ -870,6 +946,7 @@ const updateText = (lang) => {
   renderCards('services-core', t.services_core);
   renderCards('services-market', t.services_market);
   renderCards('services-extended', t.services_extended);
+  renderOffices();
 };
 
 const renderCards = (containerId, items) => {
@@ -893,11 +970,12 @@ const renderOffices = () => {
   const container = document.getElementById('offices');
   if (!container) return;
   container.innerHTML = '';
-  offices.forEach((office) => {
+  const names = officesI18n[currentLang] || officesI18n.en;
+  offices.forEach((office, index) => {
     const card = document.createElement('div');
     card.className = 'card';
     const title = document.createElement('h3');
-    title.textContent = office.country;
+    title.textContent = names[index] || office.country;
     const address = document.createElement('p');
     address.textContent = office.address;
     const phones = document.createElement('p');
