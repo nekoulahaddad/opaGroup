@@ -23,6 +23,10 @@
     stat_supply_label: "Supply chain coverage",
     stat_fleet: "Warehousing + Fleet",
     stat_fleet_label: "Reliable logistics",
+    figure_countries: "Countries of operation",
+    figure_regions: "Regions served (Africa, Asia, Middle East)",
+    figure_steps: "Steps in our working process",
+    figure_services: "Core service pillars",
     hq_title: "Headquarters",
     hq_address: "2 Bridgeway, Century City, Cape Town, 7441, South Africa",
     hq_phone: "+27 84 260 0556",
@@ -146,6 +150,20 @@
     team_lead: "Our diverse team delivers excellence with collaboration, innovation, and accountability.",
     team_caption_1: "A multidisciplinary team focused on excellence and accountability.",
     team_caption_2: "Client-centered support and long-term partnerships.",
+    team_pillar_1_title: "Excellence & Accountability",
+    team_pillar_1_text: "Our multidisciplinary team brings logistics, trade, finance, and marketing expertise together with a culture of ownership and precision.",
+    team_pillar_1_points: [
+      "Senior leadership oversight on every key project",
+      "Quality checks at each stage of delivery",
+      "Clear reporting and performance tracking"
+    ],
+    team_pillar_2_title: "Client-Centered Partnerships",
+    team_pillar_2_text: "We act as a long-term partner, aligning operations to your goals and adapting quickly to market change.",
+    team_pillar_2_points: [
+      "Dedicated account coordination",
+      "Fast response across regions",
+      "Continuous improvement for growth"
+    ],
     team_ceo: "Chief Executive Officer",
     team_md: "Managing Director",
     team_accountant: "Accountant Officer",
@@ -197,6 +215,10 @@
     stat_supply_label: "Couverture supply chain",
     stat_fleet: "Entrepots + flotte",
     stat_fleet_label: "Logistique fiable",
+    figure_countries: "Pays d'operation",
+    figure_regions: "Regions couvertes (Afrique, Asie, Moyen-Orient)",
+    figure_steps: "Etapes de notre processus de travail",
+    figure_services: "Piliers de services",
     hq_title: "Siege social",
     hq_address: "2 Bridgeway, Century City, Cape Town, 7441, Afrique du Sud",
     hq_phone: "+27 84 260 0556",
@@ -320,6 +342,20 @@
     team_lead: "Notre equipe delivre l'excellence avec collaboration et innovation.",
     team_caption_1: "Une equipe pluridisciplinaire axee sur l'excellence et la responsabilite.",
     team_caption_2: "Un accompagnement centre client et des partenariats durables.",
+    team_pillar_1_title: "Excellence et responsabilite",
+    team_pillar_1_text: "Notre equipe pluridisciplinaire reunit logistique, commerce, finance et marketing avec une culture d'exigence.",
+    team_pillar_1_points: [
+      "Supervision de la direction sur chaque projet cle",
+      "Controles qualite a chaque etape",
+      "Reporting clair et suivi de performance"
+    ],
+    team_pillar_2_title: "Partenariats centres client",
+    team_pillar_2_text: "Nous agissons comme un partenaire de long terme, en alignant les operations sur vos objectifs.",
+    team_pillar_2_points: [
+      "Coordination de compte dediee",
+      "Reponse rapide a l'international",
+      "Amelioration continue pour la croissance"
+    ],
     team_ceo: "Directeur general",
     team_md: "Directrice generale",
     team_accountant: "Responsable comptable",
@@ -371,6 +407,10 @@
     stat_supply_label: "تغطية سلسلة الإمداد",
     stat_fleet: "مستودعات وأسطول",
     stat_fleet_label: "لوجستيات موثوقة",
+    figure_countries: "بلدان التشغيل",
+    figure_regions: "المناطق المخدومة (إفريقيا، آسيا، الشرق الأوسط)",
+    figure_steps: "خطوات عملية العمل",
+    figure_services: "محاور الخدمات الأساسية",
     hq_title: "المقر الرئيسي",
     hq_address: "2 Bridgeway، Century City، كيب تاون 7441، جنوب إفريقيا",
     hq_phone: "+27 84 260 0556",
@@ -494,6 +534,20 @@
     team_lead: "فريق متنوع يقدم التميز بالتعاون والابتكار.",
     team_caption_1: "فريق متعدد التخصصات يركز على التميز والمسؤولية.",
     team_caption_2: "دعم متمحور حول العميل وشراكات طويلة الأمد.",
+    team_pillar_1_title: "التميز والمسؤولية",
+    team_pillar_1_text: "يجمع فريقنا متعدد التخصصات خبرات اللوجستيات والتجارة والمالية والتسويق مع ثقافة التملك والدقة.",
+    team_pillar_1_points: [
+      "إشراف قيادي على كل مشروع مهم",
+      "فحوصات جودة في كل مرحلة",
+      "تقارير واضحة ومتابعة أداء"
+    ],
+    team_pillar_2_title: "شراكات متمحورة حول العميل",
+    team_pillar_2_text: "نعمل كشريك طويل الأمد مع مواءمة العمليات مع أهدافك والتكيف السريع.",
+    team_pillar_2_points: [
+      "تنسيق مخصص للحسابات",
+      "استجابة سريعة عبر المناطق",
+      "تحسين مستمر للنمو"
+    ],
     team_ceo: "الرئيس التنفيذي",
     team_md: "المدير العام",
     team_accountant: "مسؤول الحسابات",
@@ -545,6 +599,10 @@
     stat_supply_label: "供应链覆盖",
     stat_fleet: "仓储 + 车队",
     stat_fleet_label: "可靠物流",
+    figure_countries: "运营国家",
+    figure_regions: "服务区域（非洲、亚洲、中东）",
+    figure_steps: "我们的工作流程步骤",
+    figure_services: "核心服务支柱",
     hq_title: "总部",
     hq_address: "2 Bridgeway, Century City, Cape Town, 7441, South Africa",
     hq_phone: "+27 84 260 0556",
@@ -668,6 +726,20 @@
     team_lead: "多元化团队以协作和创新交付卓越服务。",
     team_caption_1: "多学科团队，专注卓越与责任。",
     team_caption_2: "以客户为中心的支持与长期合作。",
+    team_pillar_1_title: "卓越与责任",
+    team_pillar_1_text: "我们的多学科团队汇聚物流、贸易、金融与营销专长，以高度责任与精准执行为核心。",
+    team_pillar_1_points: [
+      "关键项目由高层监督",
+      "每个环节进行质量检查",
+      "清晰汇报与绩效跟踪"
+    ],
+    team_pillar_2_title: "以客户为中心的合作",
+    team_pillar_2_text: "我们作为长期伙伴，围绕您的目标调整运营并快速适应市场变化。",
+    team_pillar_2_points: [
+      "专属客户协调",
+      "跨区域快速响应",
+      "持续改进促进增长"
+    ],
     team_ceo: "首席执行官",
     team_md: "总经理",
     team_accountant: "会计负责人",
@@ -719,6 +791,10 @@
     stat_supply_label: "Ufunikaji wa ugavi",
     stat_fleet: "Ghala + Magari",
     stat_fleet_label: "Usafirishaji thabiti",
+    figure_countries: "Nchi tunazofanya kazi",
+    figure_regions: "Maeneo tunayohudumia (Afrika, Asia, Mashariki ya Kati)",
+    figure_steps: "Hatua za mchakato wetu wa kazi",
+    figure_services: "Nguzo za huduma kuu",
     hq_title: "Makao Makuu",
     hq_address: "2 Bridgeway, Century City, Cape Town, 7441, South Africa",
     hq_phone: "+27 84 260 0556",
@@ -842,6 +918,20 @@
     team_lead: "Timu yetu inatoa ubora kwa ushirikiano na ubunifu.",
     team_caption_1: "Timu ya taaluma nyingi inayozingatia ubora na uwajibikaji.",
     team_caption_2: "Msaada unaomlenga mteja na ushirikiano wa muda mrefu.",
+    team_pillar_1_title: "Ubora na Uwajibikaji",
+    team_pillar_1_text: "Timu yetu ya taaluma mbalimbali inaleta utaalamu wa logstiki, biashara, fedha na masoko kwa usahihi mkubwa.",
+    team_pillar_1_points: [
+      "Uangalizi wa uongozi kwa kila mradi muhimu",
+      "Ukaguzi wa ubora kila hatua",
+      "Ripoti wazi na ufuatiliaji wa utendaji"
+    ],
+    team_pillar_2_title: "Ushirikiano Unaomlenga Mteja",
+    team_pillar_2_text: "Tunafanya kazi kama mshirika wa muda mrefu, tukiendana na malengo yako na kujibu haraka mabadiliko ya soko.",
+    team_pillar_2_points: [
+      "Uratibu wa akaunti maalum",
+      "Majibu ya haraka kwa maeneo yote",
+      "Uboreshaji endelevu kwa ukuaji"
+    ],
     team_ceo: "Mkurugenzi Mkuu",
     team_md: "Mkurugenzi wa Uendeshaji",
     team_accountant: "Afisa Mkuu wa Uhasibu",
@@ -1157,9 +1247,50 @@ const initReveal = () => {
   items.forEach((el) => observer.observe(el));
 };
 
+const initCounters = () => {
+  const counters = document.querySelectorAll('.figure-number[data-count]');
+  if (!counters.length) return;
+
+  const run = (el) => {
+    const target = parseInt(el.getAttribute('data-count') || '0', 10);
+    let current = 0;
+    const step = Math.max(1, Math.floor(target / 40));
+    const tick = () => {
+      current += step;
+      if (current >= target) {
+        el.textContent = String(target);
+        return;
+      }
+      el.textContent = String(current);
+      requestAnimationFrame(tick);
+    };
+    tick();
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    counters.forEach(run);
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          run(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  counters.forEach((el) => observer.observe(el));
+};
+
 renderOffices();
 updateText('en');
 const langSelect = document.getElementById('lang-select');
 if (langSelect) langSelect.value = 'en';
 initLangSwitch();
 initReveal();
+initCounters();
