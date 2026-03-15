@@ -462,33 +462,6 @@ h1 {
   padding-top: 24px;
 }
 
-.figures::before,
-.figures::after {
-  content: "";
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  border-radius: 28px;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  transform: rotate(8deg);
-  opacity: 0.7;
-  pointer-events: none;
-}
-
-.figures::before {
-  top: -60px;
-  left: -80px;
-  background: rgba(3, 46, 130, 0.04);
-  animation: floatShape 10s ease-in-out infinite;
-}
-
-.figures::after {
-  bottom: -70px;
-  right: -90px;
-  background: rgba(227, 28, 32, 0.04);
-  animation: floatShape 12s ease-in-out infinite;
-}
-
 .figures-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
