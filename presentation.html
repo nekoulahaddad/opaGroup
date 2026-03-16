@@ -1,0 +1,716 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OPA GROUP CO LTD | Company Presentation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --brand: #032e82;
+      --brand-dark: #021b4a;
+      --gold: #d8b65b;
+      --ink: #0b0f1a;
+      --muted: #475569;
+      --bg: #f8fafc;
+      --panel: #ffffff;
+      --card: #ffffff;
+      --line: #e2e8f0;
+      --soft: #f1f5f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Space Grotesk", system-ui, sans-serif;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: "Fraunces", serif;
+      margin: 0 0 12px 0;
+      line-height: 1.2;
+    }
+
+    p { margin: 0 0 12px 0; }
+
+    .page {
+      padding: 52px 52px 60px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      break-after: page;
+      break-inside: avoid;
+      page-break-after: always;
+    }
+
+    .page:last-child { page-break-after: auto; break-after: auto; }
+
+    .page .section-header { break-after: avoid; }
+    .page .card,
+    .page .service-item,
+    .page .accent-panel,
+    .page .image-strip,
+    .page .mosaic,
+    .page .presence,
+    .page table { break-inside: avoid; page-break-inside: avoid; }
+
+    .cover {
+      color: #fff;
+      padding: 64px 52px 64px;
+      background:
+        linear-gradient(120deg, rgba(3,46,130,0.94), rgba(2,27,74,0.94)),
+        url("assets/hero.webp") center/cover no-repeat;
+      border: none;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .brand img {
+      width: 82px;
+      height: 82px;
+      border-radius: 16px;
+      object-fit: cover;
+      background: #fff;
+      padding: 8px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.2);
+      color: #ffffff;
+      font-size: 0.9rem;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+    }
+
+    .cover h1 { font-size: 3rem; }
+    .cover p { max-width: 720px; color: #e2e8f0; }
+
+    .cover .meta {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .meta-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.28);
+      padding: 14px 16px;
+      border-radius: 14px;
+      font-size: 0.95rem;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    .section-header h2 {
+      color: var(--brand);
+      font-size: 2rem;
+    }
+
+    .badge {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: var(--soft);
+      color: var(--brand);
+      font-weight: 600;
+      font-size: 0.85rem;
+      border: 1px solid var(--line);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 26px;
+      align-items: start;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    .card h3 { color: var(--brand); font-size: 1.2rem; }
+
+    .values {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .value-chip {
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: var(--soft);
+      border: 1px solid var(--line);
+      font-size: 0.95rem;
+    }
+
+    .image-card img {
+      width: 100%;
+      border-radius: 14px;
+      height: 320px;
+      object-fit: cover;
+    }
+
+    .service-item {
+      border-radius: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: #fff;
+      min-height: 190px;
+    }
+
+    .service-item h3 { font-size: 1.05rem; }
+
+    .accent-panel {
+      background: var(--soft);
+      border-radius: 16px;
+      padding: 18px;
+      border: 1px solid var(--line);
+    }
+
+    .two-col-list {
+      columns: 2;
+      column-gap: 24px;
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .two-col-list li { break-inside: avoid; margin-bottom: 8px; }
+
+    .image-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .image-strip img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .mosaic img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+
+    .presence {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .presence img {
+      width: 100%;
+      border-radius: 14px;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .office-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.92rem;
+    }
+
+    .office-table th,
+    .office-table td {
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .office-table th {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .office-table tr:nth-child(even) td { background: #f8fafc; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+    }
+
+    .contact-links a {
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-links p { margin-bottom: 8px; }
+
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 24px;
+    }
+
+    .luxury-divider {
+      height: 2px;
+      width: 120px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.35), rgba(255,255,255,0.9));
+      margin: 16px 0 22px;
+    }
+
+    @page { size: A4; margin: 12mm; }
+
+    @media print {
+      body { background: #fff; }
+      .page { background: #fff; color: #0b0f1a; box-shadow: none; border: none; }
+      .card, .accent-panel, .service-item { background: #fff; color: #0b0f1a; box-shadow: none; }
+      a { color: var(--brand); text-decoration: none; }
+    }
+  </style>
+</head>
+<body>
+  <section class="page cover">
+    <div class="brand">
+      <img src="assets/logo.jpeg" alt="OPA Group logo" />
+      <div>
+        <h1>OPA GROUP CO LTD</h1>
+        <p>International Distribution, Logistics & Trade</p>
+      </div>
+    </div>
+    <p>Connecting business, empowering trade across Africa, Asia, and the Middle East. OPA Group delivers end-to-end distribution, procurement, logistics, and supply chain management for reliable trade at scale.</p>
+    <div class="luxury-divider"></div>
+    <div class="meta">
+      <div class="meta-card"><strong>Global Coverage</strong><br />Africa, Asia, Middle East</div>
+      <div class="meta-card"><strong>Headquarters</strong><br />Cape Town, South Africa</div>
+      <div class="meta-card"><strong>Website</strong><br />opagroupafrica.site</div>
+    </div>
+    <div class="image-strip">
+      <img src="assets/page1_img3.jpg" alt="Operations" />
+      <img src="assets/page3_img3.jpg" alt="Trade" />
+      <img src="assets/page3_img2.jpg" alt="Warehousing" />
+      <img src="assets/page4_img2.jpg" alt="Global logistics" />
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Company Overview</h2>
+      <span class="badge">Who We Are</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <p>OPA Group Co. Ltd is a dynamic company specializing in distribution, logistics, and supply chain management across Africa, Asia, and the Middle East. We connect manufacturers and suppliers directly with regional distributors, ensuring timely access to quality products and streamlined trade operations.</p>
+        <p>From strategic sourcing and procurement to warehousing, transportation, and distribution, we manage the entire value chain and tailor every solution to client needs. We do not just move goods. We move businesses forward and create opportunities across continents.</p>
+        <div class="card">
+          <h3>Vision</h3>
+          <p>To be a leading global player in supply chain and trade facilitation, connecting markets and empowering businesses through sustainable and efficient solutions.</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Mission</h3>
+          <p>To simplify trade, optimize supply chains, and deliver excellence through innovative, client-focused solutions that drive growth and success.</p>
+        </div>
+      </div>
+      <div class="image-card">
+        <img src="assets/page6_img2.jpg" alt="Distribution network" />
+        <div class="card" style="margin-top: 16px;">
+          <h3>Core Values</h3>
+          <div class="values">
+            <div class="value-chip">Integrity: Transparent, ethical business practices.</div>
+            <div class="value-chip">Innovation: Adapting to modern trade challenges.</div>
+            <div class="value-chip">Collaboration: Partnerships that create mutual success.</div>
+            <div class="value-chip">Excellence: Highest standards in every project.</div>
+            <div class="value-chip">Sustainability: Responsible practices for people and planet.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="image-strip">
+      <img src="assets/page1_img4.jpg" alt="Warehouse" />
+      <img src="assets/page1_img5.jpg" alt="Cargo" />
+      <img src="assets/page1_img6.jpg" alt="Retail supply" />
+      <img src="assets/page2_img2.jpg" alt="Logistics" />
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Leadership & Strategy</h2>
+      <span class="badge">Executive Direction</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="card">
+          <h3>Message from the CEO</h3>
+          <p>OPA Group has grown from a regional supplier into a multinational logistics and distribution powerhouse operating across 12+ countries. We invest in technology, partnerships, and skilled people to deliver transparent, efficient, and world-class services.</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Strategic Focus</h3>
+          <p>We build long-term partnerships, expand our operational footprint, and deliver measurable value through supply chain optimization, compliance, and cost efficiency. Our approach blends global reach with local execution.</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Growth Priorities</h3>
+          <ul class="two-col-list">
+            <li>Regional hubs near key ports and trade routes.</li>
+            <li>Reliable fleet and temperature-controlled logistics.</li>
+            <li>Procurement and sourcing across global suppliers.</li>
+            <li>Data-driven distribution and inventory visibility.</li>
+            <li>Client-first partnerships with clear SLAs.</li>
+            <li>Compliance and risk management across borders.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mosaic">
+        <img src="assets/page5_img2.jpg" alt="Leadership" />
+        <img src="assets/page7_img2.png" alt="Strategy" />
+        <img src="assets/page6_img3.jpg" alt="Operations" />
+        <img src="assets/page8_img2.jpg" alt="Global markets" />
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Core Services</h2>
+      <span class="badge">What We Do</span>
+    </div>
+    <div class="grid-3">
+      <div class="service-item">
+        <h3>Distribution & Wholesale Supply</h3>
+        <p>Large-scale distribution of FMCG, food and beverages, construction materials, and general merchandise with reliable bulk delivery.</p>
+      </div>
+      <div class="service-item">
+        <h3>Logistics & Transportation</h3>
+        <p>Modern fleet with temperature-controlled trucks, heavy-duty carriers, and cross-border logistics across Africa, Asia, and the Middle East.</p>
+      </div>
+      <div class="service-item">
+        <h3>Import & Export Services</h3>
+        <p>International sourcing, freight management, and customs compliance to simplify global trade for businesses of all sizes.</p>
+      </div>
+      <div class="service-item">
+        <h3>Supply Chain Management</h3>
+        <p>Integrated procurement, warehousing, inventory, transportation, and distribution for optimized performance.</p>
+      </div>
+      <div class="service-item">
+        <h3>Procurement & Sourcing</h3>
+        <p>Global supplier identification, negotiation, quality assurance, and delivery to meet client specifications.</p>
+      </div>
+      <div class="service-item">
+        <h3>Customs Clearance & Freight Forwarding</h3>
+        <p>Documentation, duties, and regulatory compliance for air, sea, and land transport with full transparency.</p>
+      </div>
+      <div class="service-item">
+        <h3>Specialized Trading Solutions</h3>
+        <p>Bulk sourcing, niche industry support, and tailored logistics for high-value and industrial products.</p>
+      </div>
+      <div class="service-item">
+        <h3>Shipping & Clearing</h3>
+        <p>End-to-end shipping and clearing services for all products, from origin to destination.</p>
+      </div>
+      <div class="service-item">
+        <h3>Market Support</h3>
+        <p>Sales & marketing teams, advertising & branding, dealership management, and channel distribution design.</p>
+      </div>
+    </div>
+    <div class="image-strip">
+      <img src="assets/page10_img1.jpg" alt="Distribution" />
+      <img src="assets/page11_img1.jpg" alt="Fleet" />
+      <img src="assets/page11_img2.jpg" alt="Shipping" />
+      <img src="assets/page12_img2.jpg" alt="Operations" />
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Market Support & Extended Solutions</h2>
+      <span class="badge">Commercial Growth</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="card">
+          <h3>Sales & Marketing Teams</h3>
+          <p>Dedicated teams to expand market reach, drive growth, and build lasting customer relationships across key markets.</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Advertising & Branding</h3>
+          <p>Creative and data-driven campaigns that help brands stand out in competitive markets and grow demand.</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Dealership & Channel Management</h3>
+          <p>Streamlined distribution partnerships and channel optimization to maximize market presence and coverage.</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Extended Business Lines</h3>
+          <p>Electronics supply, cement and construction materials, vehicle sales & rental, apartment sales & rental, and hotel & flight booking services.</p>
+        </div>
+      </div>
+      <div class="mosaic">
+        <img src="assets/page12_img4.jpg" alt="Branding" />
+        <img src="assets/page13_img2.jpg" alt="Extended services" />
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Products & Market Categories</h2>
+      <span class="badge">Portfolio</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="accent-panel">
+          <h3>Products</h3>
+          <ul class="two-col-list">
+            <li>Baked goods and breakfast cereals.</li>
+            <li>Dairy products including milk, cheese, butter, yogurt.</li>
+            <li>Beverages: soft drinks, bottled water, coffee, and alcoholic beverages.</li>
+            <li>Fruits and vegetables for local and export markets.</li>
+            <li>Processed and fresh foods, packaged, canned, and frozen.</li>
+            <li>Healthcare products and essential medicines.</li>
+            <li>Personal care and cosmetics: soaps, shampoos, diapers, skincare.</li>
+            <li>Household and cleaning items: detergents, disinfectants, hygiene essentials.</li>
+            <li>Electronics and technology products.</li>
+            <li>Cement and construction materials.</li>
+          </ul>
+        </div>
+        <div class="accent-panel" style="margin-top: 16px;">
+          <h3>Market Sectors Served</h3>
+          <ul class="two-col-list">
+            <li>Retail and supermarkets</li>
+            <li>Hospitality and catering</li>
+            <li>Healthcare and pharmaceutical</li>
+            <li>Education and corporate offices</li>
+            <li>Wholesale and distribution outlets</li>
+            <li>Government and institutional procurement</li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <img src="assets/page9_img1.jpg" alt="Products" style="width:100%; border-radius:16px; height:520px; object-fit: cover;" />
+        <div class="image-strip" style="margin-top: 12px;">
+          <img src="assets/page14_img5.png" alt="FMCG" />
+          <img src="assets/page14_img2.png" alt="Electronics" />
+          <img src="assets/page14_img3.png" alt="Construction" />
+          <img src="assets/page14_img4.png" alt="Distribution" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Operational Footprint</h2>
+      <span class="badge">How We Work</span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <p>Our disciplined process ensures reliability across sourcing, warehousing, transportation, and distribution. We combine global procurement with local execution to deliver measurable performance.</p>
+        <div class="card" style="margin-top: 12px;">
+          <h3>Process Steps</h3>
+          <ol>
+            <li>Understanding client needs and market dynamics.</li>
+            <li>Strategic sourcing and procurement from trusted manufacturers.</li>
+            <li>Warehousing and inventory management across East and Southern Africa.</li>
+            <li>Reliable logistics and distribution with a dedicated fleet.</li>
+            <li>Technology-driven operations for tracking and reporting.</li>
+            <li>Quality control and compliance for every shipment.</li>
+            <li>Continuous improvement for long-term partnerships.</li>
+          </ol>
+        </div>
+      </div>   
+      <img src="assets/page15_img4.png" alt="Products" style="width:100%; border-radius:16px; height:520px; object-fit: cover;" />
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Geographical Presence</h2>
+      <span class="badge">Where We Operate</span>
+    </div>
+    <div class="presence">
+      <div>
+        <p>A growing network across Africa, Asia, and the Middle East. Warehouses, distribution hubs, and transport fleets located near key trade routes and ports.</p>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Countries of Operation</h3>
+          <p>Rwanda, Kenya, Uganda, DRC, Tanzania, Zambia, Burundi, Malawi, Mozambique, South Africa, Botswana, China, and Dubai (UAE).</p>
+        </div>
+        <div class="card" style="margin-top: 16px;">
+          <h3>Network Strength</h3>
+          <p>We combine global reach with local expertise, supporting regional integration and optimized delivery times for clients across borders.</p>
+        </div>
+      </div>
+      <div>
+        <div class="image-strip" style="grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 12px;">
+          <img src="assets/page18_img6.png" alt="Distribution" style="object-fit: none;" />
+          <img src="assets/page18_img7.png" alt="Operations" style="object-fit: none;" />
+          <img src="assets/page18_img8.png" alt="Coverage" style="object-fit: none;" />
+          <img src="assets/page18_img9.png" alt="Logistics" style="object-fit: none;" />
+          <img src="assets/page18_img10.png" alt="Logistics" style="object-fit: none;" />
+          <img src="assets/page18_img11.png" alt="Logistics" style="object-fit: none;" />
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="margin-top: 24px;">
+      <h3>Our Head offices</h3>
+      <table class="office-table">
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Address</th>
+            <th>Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>South Africa (Headquarters)</td>
+            <td>2 Bridgeway, Century City, Cape Town, 7441, South Africa</td>
+            <td>+27 84 260 0556</td>
+          </tr>
+          <tr>
+            <td>Rwanda</td>
+            <td>KN 48street Kigali Rwanda, M.peace plaza building 11 floor</td>
+            <td>+250 792 620 687</td>
+          </tr>
+          <tr>
+            <td>Kenya</td>
+            <td>Nairobi Kenya Westend Towers 10 floor, Waiyaki Way, Westlands</td>
+            <td>+254758896370 | +254738163786</td>
+          </tr>
+          <tr>
+            <td>Congo DRC</td>
+            <td>8884 Avenue du Plateau, Kinshasa, Democratic Republic of the Congo</td>
+            <td>+243 994 807 801</td>
+          </tr>
+          <tr>
+            <td>Botswana</td>
+            <td>Plot 54351, Gaborone, Botswana</td>
+            <td>+267 392 2900</td>
+          </tr>
+          <tr>
+            <td>Mozambique</td>
+            <td>259 R. dos Desportistas, Maputo, Mozambique</td>
+            <td>+258 85 200 8882</td>
+          </tr>
+          <tr>
+            <td>Burundi</td>
+            <td>J9M4+MG5, Avenue de l'OUA, Bujumbura, Burundi</td>
+            <td>+257 79 16 25 28</td>
+          </tr>
+          <tr>
+            <td>Uganda</td>
+            <td>Kawempe-Tula Road, Kampala, Uganda</td>
+            <td>+256 784 662368</td>
+          </tr>
+          <tr>
+            <td>Tanzania</td>
+            <td>Ohio St, Dar es Salaam, Tanzania</td>
+            <td>+255 715 023 799</td>
+          </tr>
+          <tr>
+            <td>Ethiopia</td>
+            <td>Chirkos 02/03, Ethiopia</td>
+            <td>+251 11 465 2436</td>
+          </tr>
+          <tr>
+            <td>South Sudan</td>
+            <td>RJP5+7CQ, Juba, South Sudan</td>
+            <td>+211 929 115 050</td>
+          </tr>
+          <tr>
+            <td>Zambia</td>
+            <td>H7FQ+559, Karachi Street Lurbuma Market Lusaka ZM, Karachi St, Lusaka 10101, Zambia</td>
+            <td>+260 77 7494341</td>
+          </tr>
+          <tr>
+            <td>Malawi</td>
+            <td>Area 15, Chiwengo Road, Plot #46 Box 1689, Malawi</td>
+            <td>+265 888 21 79 37</td>
+          </tr>
+          <tr>
+            <td>Dubai, UAE</td>
+            <td>Bank Street Building - Khalid Bin Al Waleed Rd - Al Hamriya - Dubai - United Arab Emirates</td>
+            <td>+971 55 167 7962</td>
+          </tr>
+          <tr>
+            <td>China (Hong Kong)</td>
+            <td>Unit 603, 6/F, Kowloon Center 29-39 Ashley Road, Tsim Sha Tsui, Kowloon, Hong Kong</td>
+            <td>+86 153 7581 0653</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="page">
+    <div class="section-header">
+      <h2>Contact</h2>
+      <span class="badge">Let’s Work Together</span>
+    </div>
+    <div class="contact-grid">
+      <div class="card contact-links">
+        <h3>Contact Information</h3>
+        <p>Website: <a href="https://opagroupafrica.site/">opagroupafrica.site</a></p>
+        <p>Email: <a href="mailto:info@opagroupafrica.com">info@opagroupafrica.com</a></p>
+        <p>Email: <a href="mailto:opagroup66@gmail.com">opagroup66@gmail.com</a></p>
+        <p>Email: <a href="mailto:ceo@opagroupafrica.com">ceo@opagroupafrica.com</a></p>
+        <p>Headquarter Phone: <a href="tel:+27842600556">+27 84 260 0556</a></p>
+        <p>WhatsApp: <a href="https://wa.me/254758896370">+254 758 896 370</a></p>
+        <p>Facebook: <a href="https://www.facebook.com/opagroupcompamy">OPA GROUP CO. LTD</a></p>
+        <p>TikTok: <a href="https://www.tiktok.com/@opa.group.co.ltd">@opa.group.co.ltd</a></p>
+        <p>Instagram: <a href="https://www.instagram.com/opa_group_co_ltd/">@opa_group_co_ltd</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/opa-group-co-ltd-251bb3396/">OPA GROUP CO. LTD</a></p>
+      </div>
+      <div class="card">
+        <p style="margin-top: 12px; color: var(--muted);">Reach our team for fast, professional responses across all regions.</p>
+        <div class="image-strip" style="grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 12px;">
+          <img src="assets/page16_img2.png" alt="Team" style="height: 250px;" />
+          <img src="assets/team_alt2.webp" alt="Leadership" style="height: 250px;" />
+          <img src="assets/page16_img4.png" alt="Support" style="height: 250px;" />
+          <img src="assets/page16_img5.png" alt="Support" style="height: 250px;" />
+          <img src="assets/page16_img6.png" alt="Support" style="height: 250px;" />
+        </div>
+      </div>
+    </div>
+    <div class="footer">OPA GROUP CO LTD</div>
+  </section>
+</body>
+</html>
