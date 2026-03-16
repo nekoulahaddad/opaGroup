@@ -186,7 +186,7 @@
     form_service: "Service Interest",
     form_message: "Message",
     form_submit: "Submit Request",
-    offices_title: "Office Addresses and Phone Numbers",
+    offices_title: "Our Head offices",
     offices_lead: "International offices across Africa, Asia, and the Middle East.",
     footer_tagline: "Connecting business, empowering trade across continents.",
     footer_rights: "All rights reserved."
@@ -1003,6 +1003,21 @@ const offices = [
     phones: ["+256 784 662368"]
   },
   {
+    country: "Tanzania",
+    address: "Ohio St, Dar es Salaam, Tanzania",
+    phones: ["+255 715 023 799"]
+  },
+  {
+    country: "Ethiopia",
+    address: "Chirkos 02/03, Ethiopia",
+    phones: ["+251 11 465 2436"]
+  },
+  {
+    country: "South Sudan",
+    address: "RJP5+7CQ, Juba, South Sudan",
+    phones: ["+211 929 115 050"]
+  },
+  {
     country: "Zambia",
     address: "H7FQ+559, Karachi Street Lurbuma Market Lusaka ZM, Karachi St, Lusaka 10101, Zambia",
     phones: ["+260 77 7494341"]
@@ -1034,6 +1049,9 @@ const officesI18n = {
     "Mozambique",
     "Burundi",
     "Uganda",
+    "Tanzania",
+    "Ethiopia",
+    "South Sudan",
     "Zambia",
     "Malawi",
     "Dubai, UAE",
@@ -1048,6 +1066,9 @@ const officesI18n = {
     "Mozambique",
     "Burundi",
     "Ouganda",
+    "Tanzania",
+    "Ethiopia",
+    "South Sudan",
     "Zambie",
     "Malawi",
     "Dubai, EAU",
@@ -1062,6 +1083,9 @@ const officesI18n = {
     "موزمبيق",
     "بوروندي",
     "أوغندا",
+    "Tanzania",
+    "Ethiopia",
+    "South Sudan",
     "زامبيا",
     "مالاوي",
     "دبي، الإمارات",
@@ -1076,6 +1100,9 @@ const officesI18n = {
     "莫桑比克",
     "布隆迪",
     "乌干达",
+    "Tanzania",
+    "Ethiopia",
+    "South Sudan",
     "赞比亚",
     "马拉维",
     "迪拜（阿联酋）",
@@ -1090,6 +1117,9 @@ const officesI18n = {
     "Msumbiji",
     "Burundi",
     "Uganda",
+    "Tanzania",
+    "Ethiopia",
+    "South Sudan",
     "Zambia",
     "Malawi",
     "Dubai, UAE",

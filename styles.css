@@ -761,6 +761,10 @@ h1 {
   margin-top: 40px;
 }
 
+.offices-header h3 {
+  color: #032E82;
+}
+
 .office-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
