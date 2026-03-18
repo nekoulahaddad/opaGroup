@@ -23,7 +23,6 @@
     "@type": "Organization",
     "name": "OPA GROUP CO LTD",
     "url": "https://opagroupafrica.site/",
-    "email": "info@opagroupafrica.com",
     "telephone": "+27 84 260 0556",
     "address": {
       "@type": "PostalAddress",
@@ -36,13 +35,11 @@
     "contactPoint": [
       {
         "@type": "ContactPoint",
-        "contactType": "sales",
-        "email": "info@opagroupafrica.com"
+        "contactType": "sales"
       },
       {
         "@type": "ContactPoint",
-        "contactType": "executive",
-        "email": "ceo@opagroupafrica.com"
+        "contactType": "executive"
       }
     ]
   }
@@ -139,11 +136,11 @@
               </div>
               <div>
                 <p class="label" data-i18n="hero_card_label_2">Email</p>
-                <p class="value">info@opagroupafrica.com</p>
+                <p class="value"><span class="obfuscated-email" data-user="info" data-domain="opagroupafrica.com"></span></p>
               </div>
               <div>
                 <p class="label" data-i18n="hero_card_label_3">Executive</p>
-                <p class="value">ceo@opagroupafrica.com</p>
+                <p class="value"><span class="obfuscated-email" data-user="ceo" data-domain="opagroupafrica.com"></span></p>
               </div>
             </div>
           </div>
@@ -459,9 +456,9 @@
         <div class="contact-grid">
           <div class="card contact-card">
             <h3 data-i18n="contact_info_title">Contact Information</h3>
-            <p><strong data-i18n="contact_email">Email</strong>: info@opagroupafrica.com</p>
-            <p><strong data-i18n="contact_email_2">Email</strong>: opagroup66@gmail.com</p>
-            <p><strong data-i18n="contact_email_3">Email</strong>: ceo@opagroupafrica.com</p>
+            <p><strong data-i18n="contact_email">Email</strong>: <span class="obfuscated-email" data-user="info" data-domain="opagroupafrica.com"></span></p>
+            <p><strong data-i18n="contact_email_2">Email</strong>: <span class="obfuscated-email" data-user="opagroup66" data-domain="gmail.com"></span></p>
+            <p><strong data-i18n="contact_email_3">Email</strong>: <span class="obfuscated-email" data-user="ceo" data-domain="opagroupafrica.com"></span></p>
             <p><strong data-i18n="contact_phone">Headquarter Phone</strong>: +27 84 260 0556</p>
             <p><strong data-i18n="contact_hq">Headquarter</strong>: 2 Bridgeway, Century City, Cape Town, 7441, South Africa</p>
           </div>
@@ -488,7 +485,7 @@
       </div>
       <div>
         <p class="muted" data-i18n="footer_rights">All rights reserved.</p>
-        <p class="muted">info@opagroupafrica.com</p>
+        <p class="muted"><span class="obfuscated-email" data-user="info" data-domain="opagroupafrica.com"></span></p>
         <div class="social-links">
           <a href="https://www.facebook.com/opagroupcompamy" target="_blank" rel="noopener">Facebook</a>
           <a href="https://www.tiktok.com/@opa.group.co.ltd" target="_blank" rel="noopener">TikTok</a>
@@ -507,6 +504,21 @@
     <strong>+254 758 896 370</strong>
   </a>
 
+  <script>
+    (function () {
+      var nodes = document.querySelectorAll(".obfuscated-email");
+      for (var i = 0; i < nodes.length; i++) {
+        var node = nodes[i];
+        var user = node.getAttribute("data-user") || "";
+        var domain = node.getAttribute("data-domain") || "";
+        if (!user || !domain) {
+          continue;
+        }
+        var email = user + "@" + domain;
+        node.textContent = email;
+      }
+    })();
+  </script>
   <script src="app.js"></script>
 </body>
 </html>

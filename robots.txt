@@ -1,4 +1,17 @@
 User-agent: *
 Allow: /
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
 
 Sitemap: https://opagroupafrica.site/sitemap.xml
