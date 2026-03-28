@@ -487,6 +487,12 @@ h1 {
   margin-bottom: 0;
 }
 
+/* Blur all section content except the alert notice */
+.section > :not(.section-alert),
+.hero > :not(.section-alert) {
+  filter: blur(4px);
+}
+
 
 .figures {
   padding-top: 24px;
