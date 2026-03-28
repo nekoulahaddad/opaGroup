@@ -457,6 +457,36 @@ h1 {
   border-top: none;
 }
 
+.section-alert {
+  margin-bottom: 32px;
+}
+
+.section-alert .alert-inner {
+  background: #fff5f5;
+  border: 2px solid #E31C20;
+  border-radius: 18px;
+  padding: 22px 24px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+}
+
+.section-alert .alert-title {
+  margin: 0 0 10px;
+  color: #E31C20;
+  font-family: "Fraunces", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.95rem;
+}
+
+.section-alert p {
+  margin: 8px 0;
+  color: rgba(0, 0, 0, 0.78);
+}
+
+.section-alert p:last-child {
+  margin-bottom: 0;
+}
+
 
 .figures {
   padding-top: 24px;
